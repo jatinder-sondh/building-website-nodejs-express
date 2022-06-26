@@ -8,7 +8,7 @@ const router = express.Router();
 module.exports = (params) => {
     const { speakersService } = params;
 
-    router.get("/", async (request, response) => {
+    router.get("/", async (request, response, next) => {
         try {
             const artwork = await speakersService.getAllArtwork();
             const topSpeakers = await speakersService.getList();

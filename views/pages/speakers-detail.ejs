@@ -1,49 +1,30 @@
-<!DOCTYPE html>
-<html>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <article class="speakerslist maincontent">
 
-<head>
-  <title>Roux Meetups--Speaker Info</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=block" rel="stylesheet">
-</head>
+        <h1 class="speakerslist-title">
+          <%= speaker.title %>
+        </h1>
+        <div class="speakerslist-name">with
+          <a href="/speakers/<%= speaker.shortname %>">
+            <%= speaker.name %>
+          </a>
+        </div>
+        <p class="speakerslist-info mt-2">
+          <a href="/speakers/<%= speaker.shortname %>">
+            <img class="speakerslist-img img-fluid" src="/images/speakers/<%= speaker.shortname %>.jpg"
+              alt="Photo of <%= speaker.name %>">
+          </a>
+        </p>
+        <p>
+          <%- speaker.description %>
+        </p>
 
-<body>
-
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-8">
-        <article class="speakerslist maincontent">
-
-          <h1 class="speakerslist-title">
-            <%= speaker.title %>
-          </h1>
-          <div class="speakerslist-name">with
-            <a href="/speakers/<%= speaker.shortname %>">
-              <%= speaker.name %>
-            </a>
-          </div>
-          <p class="speakerslist-info mt-2">
-            <a href="/speakers/<%= speaker.shortname %>">
-              <img class="speakerslist-img img-fluid" src="/images/speakers/<%= speaker.shortname %>.jpg"
-                alt="Photo of <%= speaker.name %>">
-            </a>
-          </p>
-          <p>
-            <%- speaker.description %>
-          </p>
-
-        </article>
-      </div>
-      <aside class="col-md-4">
-        <%- include('./partials/artwork') %>
-      </aside>
+      </article>
     </div>
+    <aside class="col-md-4">
+      <%- include('./partials/artwork') %>
+    </aside>
   </div>
-
-</body>
-
-</html>
+</div>

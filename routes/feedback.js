@@ -8,13 +8,14 @@ module.exports = (params) => {
     router.get("/", async (request, response, next) => {
         try {
             const feedback = await feedbackService.getList();
-            return response.json(feedback);
+            return response.render('layout', { pageTitle: 'Feedback', template: 'feedback', feedback });
         } catch (error) {
-            return next(error)
+            return next(error);
         }
     });
 
     router.post("/", (request, response) => {
+        console.log(request.body);
         return response.send("Feedback form posted")
     });
 
