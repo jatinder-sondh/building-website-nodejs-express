@@ -5,7 +5,6 @@ const app = express();
 
 const port = 3000;
 
-
 app.use(express.static(path.join(__dirname, './static')));
 
 app.get("/", (request, response) => {
@@ -17,5 +16,5 @@ app.get("/speakers", (request, response) => {
 });
 
 app.listen(port, () => {
-    console.log("expresss server on port", port)
-})
+    console.log("Express server on port", port)
+});
