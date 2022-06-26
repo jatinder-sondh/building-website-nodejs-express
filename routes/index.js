@@ -9,13 +9,13 @@ module.exports = (params) => {
     const { speakersService } = params;
 
     router.get("/", async (request, response) => {
-        // if (!request.session.visitCount) {
-        //     request.session.visitCount = 0
-        // }
-        // request.session.visitCount += 1
-
-        const topSpeakers = await speakersService.getList();
-        response.render('layout', { pageTitle: 'Welcome', template: 'index', topSpeakers });
+        try {
+            const artwork = await speakersService.getAllArtwork();
+            const topSpeakers = await speakersService.getList();
+            return response.render('layout', { pageTitle: 'Welcome', template: 'index', topSpeakers, artwork });
+        } catch (error) {
+            return next(error);
+        }
     });
 
     router.use('/speakers', speakersRoute(params));
