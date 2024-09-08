@@ -1,18 +1,10 @@
-# Building a website with Node.js and Express
+# Node Express.js App
 
-This repository contains the code for my course 'Building a Website with Node.js Node.js' on [LinkedIn Learning](https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3).
+# Home page
+![image](https://github.com/user-attachments/assets/e33589a2-af9e-44d3-937d-3a144f9b9d86)
 
-The master branch contains the initial version to get started with, while the branches contain the state of the code at the beginning (e.g. 02_02**b**) and end (e.g. 02_02**e**) of a video.
+# Speaker page
+![image](https://github.com/user-attachments/assets/5dadbe54-b5cc-4f74-9cfa-a790f1ed8225)
 
-## Setting up the project
-
-* In your terminal, create directory `building-website-nodejs-express` and **change into it**.
-* Run 
-  ```bash
-  git clone --bare git@github.com:danielkhan/building-website-nodejs-express.git .git
-  git config --bool core.bare false
-  git reset --hard
-  git branch
-  ```
-  
-Everything else will be discussed in my course.
+# Feedback page
+![image](https://github.com/user-attachments/assets/d7066b4b-8806-476f-a117-6603548e38b3)
