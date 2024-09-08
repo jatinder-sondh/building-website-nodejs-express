@@ -8,7 +8,7 @@
     "dev": "nodemon --ignore feedback.json server.js"
   },
   "keywords": [],
-  "author": "Daniel Khan",
+  "author": "Jatinder Kaur",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.0",
